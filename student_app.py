@@ -17,3 +17,9 @@ def executer():
   root.title('Cadastro de Alunos')
   root.geometry("700x700+500+100")
    
+  # Cria a tabela TreeView
+  tree = ttk.Treeview(root, columns=('Name', 'Email'))
+  tree.heading('Name', text='Name')
+  tree.heading('Email', text='Email')
+  tree.pack()
+

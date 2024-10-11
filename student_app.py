@@ -12,6 +12,22 @@ def executer():
   A janela é posicionada em uma localização fixa na tela.
   """
   
+  # Função para adicionar aluno
+  def add_student():
+    """
+    Adiciona um aluno à tabela.
+
+    Esta função obtém os valores dos campos de entrada (nome e email),
+    insere esses valores na tabela TreeView, e limpa os campos de entrada.
+    """
+    name = entry_name.get()
+    email = entry_email.get()
+    
+    tree.insert('', tk.END, values=(name, email))
+    
+    entry_name.delete(0, tk.END)
+    entry_email.delete(0, tk.END)
+  
   # Define a posição fixa da janela
   root = tk.Tk()
   root.title('Cadastro de Alunos')
@@ -35,7 +51,9 @@ def executer():
   entry_email.pack()
   
   # Botão para adicionar aluno
-  button_add = tk.Button(root, text='Add') 
+  button_add = tk.Button(root, text='Add', command=add_student) 
   button_add.pack()
   
   root.mainloop()
+
+executer()

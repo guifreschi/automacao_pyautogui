@@ -34,4 +34,8 @@ def executer():
   entry_email = tk.Entry(root)
   entry_email.pack()
   
-
+  # Botão para adicionar aluno
+  button_add = tk.Button(root, text='Add') 
+  button_add.pack()
+  
+  root.mainloop()

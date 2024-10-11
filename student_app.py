@@ -23,3 +23,15 @@ def executer():
   tree.heading('Email', text='Email')
   tree.pack()
 
+  # Criando campo name e email
+  label_name = tk.Label(root, text='Name')
+  label_name.pack()
+  entry_name = tk.Entry(root)
+  entry_name.pack()
+
+  label_email = tk.Label(root, text='Email')
+  label_email.pack()
+  entry_email = tk.Entry(root)
+  entry_email.pack()
+  
+
